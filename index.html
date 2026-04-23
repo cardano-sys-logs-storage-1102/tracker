@@ -19,7 +19,6 @@
     --green-border:   rgba(0, 230, 118, 0.16);
     --green-glow:     rgba(0, 230, 118, 0.30);
 
-    /* semanas — tons escuros sofisticados */
     --w1-bg: rgba(255,255,255,0.06);
     --w1-border: rgba(255,255,255,0.12);
     --w2-bg: rgba(236,72,153,0.10);
@@ -37,7 +36,6 @@
     --w4-text: #93c5fd;
     --w5-text: #fdba74;
 
-    /* hoje highlight */
     --today-bg:    rgba(0,230,118,0.13);
     --today-border: rgba(0,230,118,0.5);
 
@@ -84,7 +82,6 @@
     overflow-x: hidden;
   }
 
-  /* ── TOPBAR ── */
   .topbar {
     position: fixed; top: 0; left: 0; right: 0; height: 52px;
     background: rgba(5,10,6,0.94);
@@ -110,7 +107,6 @@
   }
   .back-btn:hover { color: var(--green-primary); background: var(--green-ghost); }
 
-  /* month list inside topbar */
   .month-list {
     list-style: none; display: flex;
     overflow-x: auto; scrollbar-width: none;
@@ -132,7 +128,6 @@
     background: var(--green-ghost);
     border-bottom-color: var(--green-primary);
   }
-  /* month progress badge */
   .month-list li .m-pct {
     font-size: 0.55rem; color: var(--green-dim);
     margin-left: 4px; opacity: 0.8;
@@ -148,7 +143,6 @@
   .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-primary); box-shadow: 0 0 8px var(--green-glow); animation: pulse-dot 2.2s infinite; }
   @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.35} }
 
-  /* ── MAIN ── */
   .main-content {
     flex: 1; padding: 76px 32px 0 32px;
     position: relative; z-index: 1;
@@ -158,10 +152,8 @@
   .section-eyebrow { font-family: var(--font-mono); font-size: 0.62rem; color: var(--green-dim); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 5px; }
   .section-title   { font-size: 1.65rem; font-weight: 600; color: var(--text-bright); letter-spacing: -0.02em; }
 
-  /* ── DASHBOARD WRAPPER ── */
   .dashboard-wrapper { width: max-content; max-width: 100%; display: flex; flex-direction: column; }
 
-  /* ── TABLE ── */
   .table-scroll { overflow-x: auto; }
   table {
     border-collapse: collapse;
@@ -178,7 +170,6 @@
     font-family: var(--font-mono); font-size: 0.75rem;
   }
 
-  /* title row */
   .title-row {
     background: rgba(0,230,118,0.05);
     font-family: var(--font-mono); font-size: 0.7rem;
@@ -188,7 +179,6 @@
     border-bottom: 1px solid var(--border-card);
   }
 
-  /* week header cells */
   .weeks-row th { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; padding: 8px 4px; }
   .w1-h { background: var(--w1-bg); color: var(--w1-text); border-bottom: 1px solid var(--w1-border); }
   .w2-h { background: var(--w2-bg); color: var(--w2-text); border-bottom: 1px solid var(--w2-border); }
@@ -196,7 +186,6 @@
   .w4-h { background: var(--w4-bg); color: var(--w4-text); border-bottom: 1px solid var(--w4-border); }
   .w5-h { background: var(--w5-bg); color: var(--w5-text); border-bottom: 1px solid var(--w5-border); }
 
-  /* date row */
   .dates-row th { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted); padding: 5px 4px; }
   .w1 { background: var(--w1-bg); }
   .w2 { background: var(--w2-bg); }
@@ -204,7 +193,6 @@
   .w4 { background: var(--w4-bg); }
   .w5 { background: var(--w5-bg); }
 
-  /* TODAY column highlight */
   th.today-col, td.today-col {
     background: var(--today-bg) !important;
     box-shadow: inset 0 0 0 1px var(--today-border);
@@ -212,7 +200,6 @@
   }
   th.today-col { color: var(--green-primary) !important; }
 
-  /* habit col (emoji) */
   .habit-col {
     min-width: 52px; font-size: 1.25em;
     background: rgba(0,230,118,0.03);
@@ -221,7 +208,6 @@
   .habit-col[contenteditable="true"] { cursor: text; }
   .habit-col:focus { outline: 1px solid var(--green-border); background: var(--green-ghost); }
 
-  /* streak col */
   .streak-col {
     min-width: 52px; font-family: var(--font-mono); font-size: 0.7rem;
     background: rgba(0,230,118,0.03); color: var(--green-dim);
@@ -231,7 +217,6 @@
   .streak-num { font-size: 0.9rem; color: var(--green-primary); line-height: 1; }
   .streak-label { font-size: 0.5rem; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* done col */
   .done-col {
     min-width: 46px; font-family: var(--font-mono); font-size: 0.7rem;
     background: rgba(0,230,118,0.03); color: var(--text-muted);
@@ -240,7 +225,6 @@
   .done-num { font-size: 0.85rem; color: var(--text-body); line-height: 1; }
   .done-lbl { font-size: 0.5rem; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* goal col */
   .goal-col {
     min-width: 50px; font-family: var(--font-mono); font-size: 0.8rem;
     font-weight: 600; color: var(--accent-amber);
@@ -248,7 +232,6 @@
   }
   .goal-col:focus { outline: 1px solid var(--accent-amber); background: rgba(255,165,2,0.06); }
 
-  /* checkbox cells */
   tbody td { transition: background var(--transition); }
   tbody tr:hover td { background: rgba(0,230,118,0.025); }
   td input[type="checkbox"] {
@@ -257,13 +240,11 @@
     accent-color: var(--green-primary);
   }
 
-  /* header label cells */
   .header-habit { background: rgba(0,230,118,0.04); font-size: 0.58rem; color: var(--text-muted); letter-spacing: 0.1em; }
   .header-streak { background: rgba(0,230,118,0.04); font-size: 0.58rem; color: var(--text-muted); letter-spacing: 0.1em; }
   .header-done   { background: rgba(0,230,118,0.04); font-size: 0.58rem; color: var(--text-muted); letter-spacing: 0.1em; }
   .header-goal   { background: rgba(0,230,118,0.04); font-size: 0.58rem; color: var(--text-muted); letter-spacing: 0.1em; }
 
-  /* ── CHARTS ── */
   .charts-container {
     display: flex; gap: 14px;
     margin-top: 18px;
@@ -290,7 +271,6 @@
   .line-box     { flex: 2.2; min-width: 340px; }
   .bar-box      { flex: 1.5; min-width: 240px; }
 
-  /* ── SYNC BAR ── */
   .sync-bar {
     display: flex; gap: 8px; align-items: center;
     padding: 10px 32px;
@@ -311,7 +291,6 @@
   .btn-action:hover { color: var(--green-primary); border-color: var(--green-dim); }
   .sync-status { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-dim); margin-left: auto; letter-spacing: 0.08em; }
 
-  /* ── MODAL ── */
   .modal-overlay {
     display: none; position: fixed;
     inset: 0; background: rgba(0,0,0,0.88);
@@ -344,7 +323,6 @@
   .btn-modal-close { background: var(--green-ghost); color: var(--text-body); border: 1px solid var(--green-border); }
   .btn-modal-close:hover { color: var(--green-primary); border-color: var(--green-dim); }
 
-  /* fade-in on month switch */
   @keyframes fadeSection { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform: translateY(0); } }
   .fade-in { animation: fadeSection 0.28s ease; }
 </style>
@@ -353,16 +331,10 @@
 
 <canvas id="matrix-bg"></canvas>
 
-<!-- MODALS -->
 <div class="modal-overlay" id="exportModal">
   <div class="modal-content">
     <div class="modal-title">// export · backup_json</div>
-    <p>O Obsidian bloqueia ferramentas de exportação automática. Para salvar seu progresso:</p>
-    <ol>
-      <li><b>Pressione Ctrl + A</b> para selecionar tudo, depois <b>Ctrl + C</b> para copiar.</li>
-      <li>Crie uma nova nota chamada <b>habitos_2026.json</b>.</li>
-      <li>Cole o conteúdo e salve.</li>
-    </ol>
+    <p>Copie o JSON abaixo para guardar um backup local:</p>
     <textarea id="exportTextarea" readonly></textarea>
     <div class="modal-buttons">
       <button class="btn-modal btn-modal-close" onclick="fecharModalExport()">fechar</button>
@@ -370,7 +342,6 @@
   </div>
 </div>
 
-<!-- TOPBAR -->
 <nav class="topbar">
   <button class="back-btn" onclick="window.history.back()">← central</button>
   <div class="topbar-brand">
@@ -381,12 +352,11 @@
   <div class="topbar-right">
     <div class="status-dot">
       <span class="dot"></span>
-      <span>online</span>
+      <span id="syncStatus">conectando...</span>
     </div>
   </div>
 </nav>
 
-<!-- MAIN -->
 <main class="main-content">
   <div class="section-header">
     <div class="section-eyebrow">// monitoramento</div>
@@ -424,12 +394,10 @@
   </div>
 </main>
 
-<!-- SYNC BAR -->
 <div class="sync-bar">
   <button class="btn-action" onclick="abrirModalExportacao()">exportar json</button>
   <input type="file" id="fileInput" style="display:none" accept=".json" onchange="importData(event)">
   <button class="btn-action" onclick="document.getElementById('fileInput').click()">carregar backup</button>
-  <span class="sync-status" id="syncStatus">todos os sistemas operacionais · tracker_v3</span>
 </div>
 
 <script>
@@ -451,10 +419,8 @@
     ctx.fillStyle = 'rgba(5,10,6,0.042)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.font = '13px JetBrains Mono, monospace';
-
     drops.forEach((y, i) => {
       const t = Math.random();
-      /* bright head */
       ctx.fillStyle = t > 0.92 ? '#ffffff' : t > 0.6 ? '#00e676' : '#10b981';
       const char = chars[Math.floor(Math.random() * chars.length)];
       ctx.fillText(char, i * 16, y * 16);
@@ -468,7 +434,7 @@
   setInterval(draw, 48);
 })();
 
-/* ── DATA ── */
+/* ── CONSTANTS ── */
 const STORAGE_KEY = 'habitTracker2026_v3';
 const months = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const monthDays = [31,28,31,30,31,30,31,31,30,31,30,31];
@@ -486,38 +452,39 @@ const oldToNewMap = {
   "Doutorado":"📊","Onibus":"🚌","Ifood":"🍔","Suplementos":"💊"
 };
 
-let trackerData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-
-/* migration from old keys */
-let needMig = false;
-Object.keys(trackerData).forEach(m => {
-  (trackerData[m] || []).forEach(h => {
-    if (oldToNewMap[h.name]) { h.name = oldToNewMap[h.name]; needMig = true; }
-  });
+const DEFAULT_DATA = {};
+months.forEach(m => {
+  DEFAULT_DATA[m] = [
+    {name:"🏢",goal:20,days:Array(31).fill(false)},
+    {name:"📚",goal:15,days:Array(31).fill(false)},
+    {name:"🥋",goal:12,days:Array(31).fill(false)},
+    {name:"📊",goal:15,days:Array(31).fill(false)},
+    {name:"🚌",goal:20,days:Array(31).fill(false)},
+    {name:"🍔",goal:4, days:Array(31).fill(false)},
+    {name:"💊",goal:30,days:Array(31).fill(false)}
+  ];
 });
-if (needMig) saveData();
 
-if (Object.keys(trackerData).length === 0) {
-  months.forEach(m => {
-    trackerData[m] = [
-      {name:"🏢",goal:20,days:Array(31).fill(false)},
-      {name:"📚",goal:15,days:Array(31).fill(false)},
-      {name:"🥋",goal:12,days:Array(31).fill(false)},
-      {name:"📊",goal:15,days:Array(31).fill(false)},
-      {name:"🚌",goal:20,days:Array(31).fill(false)},
-      {name:"🍔",goal:4, days:Array(31).fill(false)},
-      {name:"💊",goal:30,days:Array(31).fill(false)}
-    ];
-  });
+let trackerData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+
+function setStatus(msg) {
+  document.getElementById('syncStatus').textContent = msg;
 }
 
+/* ── SAVE (Firestore) ── */
 function saveData() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(trackerData));
-  document.getElementById('syncStatus').textContent =
-    'salvo · ' + new Date().toLocaleTimeString('pt-BR');
+  if (!window._db || !window._userId || !window._firestoreSetDoc) {
+    setStatus('⚠ sem conexão');
+    return;
+  }
+  setStatus('salvando...');
+  const docRef = window._firestoreDoc(window._db, 'users', window._userId, 'data', 'tracker');
+  window._firestoreSetDoc(docRef, trackerData)
+    .then(() => setStatus('✓ firestore · ' + new Date().toLocaleTimeString('pt-BR')))
+    .catch(err => { console.error(err); setStatus('✗ erro ao salvar'); });
 }
 
-/* ── MONTH PCTS for topbar badges ── */
+/* ── MONTH PCTS ── */
 function calcMonthPct(month) {
   const habits = trackerData[month] || [];
   if (!habits.length) return 0;
@@ -545,8 +512,8 @@ function buildMonthMenu() {
 
 /* ── TODAY ── */
 const today = new Date();
-const todayMonthIdx = today.getMonth(); // 0-based
-const todayDay = today.getDate();       // 1-based
+const todayMonthIdx = today.getMonth();
+const todayDay = today.getDate();
 
 function isCurrentMonthView() {
   return months.indexOf(currentMonth) === todayMonthIdx;
@@ -557,18 +524,15 @@ function buildTableHeader() {
   const mIdx  = months.indexOf(currentMonth);
   const nDays = monthDays[mIdx];
 
-  /* title */
   document.getElementById('tableTitle').textContent =
     `// ${currentMonth.toLowerCase()} · 2026`;
 
-  /* weeks row */
   const weeksRow = document.getElementById('weeksRow');
   weeksRow.innerHTML = '';
-  const addTh = (cls, label, colspan, extra='') => {
+  const addTh = (cls, label, colspan) => {
     const th = document.createElement('th');
     th.className = cls; th.textContent = label;
     if (colspan) th.colSpan = colspan;
-    if (extra) th.setAttribute('style', extra);
     weeksRow.appendChild(th);
   };
   addTh('header-habit','',1);
@@ -581,7 +545,6 @@ function buildTableHeader() {
   addTh('header-done',  '',1);
   addTh('header-goal',  '',1);
 
-  /* dates row */
   const datesRow = document.getElementById('datesRow');
   datesRow.innerHTML = '';
   const addDate = (cls, txt, isToday) => {
@@ -596,7 +559,6 @@ function buildTableHeader() {
     const isTdy = isCurrentMonthView() && i === todayDay;
     addDate(wc, i, isTdy);
   }
-  /* fill remaining days grey */
   for (let i = nDays+1; i <= 31; i++) {
     const th = document.createElement('th');
     th.textContent = '';
@@ -609,14 +571,12 @@ function buildTableHeader() {
   addDate('header-goal',  'meta');
 }
 
-/* ── STREAK CALC ── */
+/* ── STREAK ── */
 function calcStreak(days) {
-  /* streak = consecutive days from today backwards (or from last checked day) */
   const mIdx = months.indexOf(currentMonth);
   const nDays = monthDays[mIdx];
   const isCurrent = isCurrentMonthView();
-  const startFrom = isCurrent ? todayDay - 1 : nDays - 1; // 0-based index
-
+  const startFrom = isCurrent ? todayDay - 1 : nDays - 1;
   let streak = 0;
   for (let i = startFrom; i >= 0; i--) {
     if (days[i]) streak++;
@@ -625,7 +585,7 @@ function calcStreak(days) {
   return streak;
 }
 
-/* ── RENDER HABITS ── */
+/* ── RENDER ── */
 function renderHabits() {
   buildTableHeader();
 
@@ -636,10 +596,9 @@ function renderHabits() {
 
   const habits = trackerData[currentMonth];
 
-  habits.forEach((habit, hIdx) => {
+  habits.forEach((habit) => {
     const tr = document.createElement('tr');
 
-    /* emoji cell */
     const tdName = document.createElement('td');
     tdName.className = 'habit-col';
     tdName.contentEditable = 'true';
@@ -652,7 +611,6 @@ function renderHabits() {
     });
     tr.appendChild(tdName);
 
-    /* checkbox cells */
     for (let i = 0; i < 31; i++) {
       const td = document.createElement('td');
       const dayNum = i + 1;
@@ -668,11 +626,9 @@ function renderHabits() {
         cb.addEventListener('change', () => {
           habit.days[i] = cb.checked;
           saveData(); updateCharts(); buildMonthMenu();
-          /* refresh streak cell */
           const streakTd = tr.querySelector('.streak-col');
           const s = calcStreak(habit.days);
           streakTd.innerHTML = `<div class="streak-val"><span class="streak-num">${s}</span><span class="streak-label">streak</span></div>`;
-          /* refresh done cell */
           const doneTd = tr.querySelector('.done-col');
           const done = habit.days.slice(0, nDays).filter(Boolean).length;
           doneTd.innerHTML = `<div class="done-val"><span class="done-num">${done}</span><span class="done-lbl">feito</span></div>`;
@@ -684,21 +640,18 @@ function renderHabits() {
       tr.appendChild(td);
     }
 
-    /* streak cell */
     const tdStreak = document.createElement('td');
     tdStreak.className = 'streak-col';
     const streak = calcStreak(habit.days);
     tdStreak.innerHTML = `<div class="streak-val"><span class="streak-num">${streak}</span><span class="streak-label">streak</span></div>`;
     tr.appendChild(tdStreak);
 
-    /* done cell */
     const tdDone = document.createElement('td');
     tdDone.className = 'done-col';
     const done = habit.days.slice(0, nDays).filter(Boolean).length;
     tdDone.innerHTML = `<div class="done-val"><span class="done-num">${done}</span><span class="done-lbl">feito</span></div>`;
     tr.appendChild(tdDone);
 
-    /* goal cell */
     const tdGoal = document.createElement('td');
     tdGoal.className = 'goal-col';
     tdGoal.contentEditable = 'true';
@@ -743,7 +696,6 @@ function updateCharts() {
 
   const base = { responsive: true, maintainAspectRatio: false };
 
-  /* DOUGHNUT */
   const ctxD = document.getElementById('doughnutChart').getContext('2d');
   if (dChart) dChart.destroy();
   const total = dataPercent.reduce((a,b)=>a+b,0);
@@ -763,7 +715,6 @@ function updateCharts() {
     }
   });
 
-  /* LINE */
   const ctxL = document.getElementById('lineChart').getContext('2d');
   if (lChart) lChart.destroy();
   lChart = new Chart(ctxL, {
@@ -790,7 +741,6 @@ function updateCharts() {
     }
   });
 
-  /* BAR */
   const ctxB = document.getElementById('barChart').getContext('2d');
   if (bChart) bChart.destroy();
   bChart = new Chart(ctxB, {
@@ -836,7 +786,7 @@ function importData(event) {
       if (imported && imported['Janeiro']) {
         trackerData = imported;
         saveData(); buildMonthMenu(); renderHabits();
-        document.getElementById('syncStatus').textContent = 'backup carregado ✓';
+        setStatus('backup carregado ✓');
       }
     } catch(err) {}
   };
@@ -848,16 +798,13 @@ function importData(event) {
 function selectMonth(name) {
   currentMonth = name;
   document.getElementById('pageTitle').textContent = name;
-
   document.querySelectorAll('.month-list li').forEach(li => {
     li.classList.toggle('active', li.textContent.startsWith(name));
   });
-
   const w = document.getElementById('dashWrapper');
   w.classList.remove('fade-in');
   void w.offsetWidth;
   w.classList.add('fade-in');
-
   renderHabits();
 }
 
@@ -867,5 +814,70 @@ window.onload = () => {
   renderHabits();
 };
 </script>
+
+<!-- ══════════════════════════════════════════════════════
+     FIREBASE · FIRESTORE INTEGRATION
+     ══════════════════════════════════════════════════════ -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+  import { getFirestore, doc, getDoc, setDoc }
+    from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAw9H0qykfeoQXbZsFSToGYfggfNloQnaE",
+    authDomain: "hub-data-fe2fc.firebaseapp.com",
+    projectId: "hub-data-fe2fc",
+    storageBucket: "hub-data-fe2fc.firebasestorage.app",
+    messagingSenderId: "61570232514",
+    appId: "1:61570232514:web:65d5df5cc901d224340b5b"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+  const USER_ID = 'leo';
+
+  window._db     = db;
+  window._userId = USER_ID;
+
+  async function initFirebase() {
+    try {
+      const dataRef  = doc(db, 'users', USER_ID, 'data', 'tracker');
+      const dataSnap = await getDoc(dataRef);
+
+      if (dataSnap.exists()) {
+        const remote = dataSnap.data();
+        // garantir shape correta em todos os meses
+        const months = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+        months.forEach(m => {
+          if (!remote[m]) remote[m] = JSON.parse(JSON.stringify(DEFAULT_DATA[m]));
+          remote[m].forEach(h => { if (!h.days) h.days = Array(31).fill(false); });
+        });
+        trackerData = remote;
+      } else {
+        await setDoc(dataRef, trackerData);
+      }
+
+      buildMonthMenu();
+      renderHabits();
+
+      document.getElementById('syncStatus').textContent =
+        '✓ firestore · ' + new Date().toLocaleTimeString('pt-BR');
+
+    } catch (err) {
+      console.error('[Firebase]', err);
+      document.getElementById('syncStatus').textContent = '✗ firestore offline';
+    }
+  }
+
+  window._firestoreSetDoc = setDoc;
+  window._firestoreDoc    = doc;
+
+  if (document.readyState === 'complete') {
+    setTimeout(initFirebase, 300);
+  } else {
+    window.addEventListener('load', () => setTimeout(initFirebase, 300));
+  }
+</script>
+
 </body>
 </html>
